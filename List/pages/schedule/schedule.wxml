@@ -1,0 +1,16 @@
+//test.wxml
+<view class="container log-list">
+<view>今天是{{}}</view>
+<!--有wx:key-->
+<view wx:for="{{input_data}}" wx:key="item.id" >
+<input class="date" value="id:{{item.id}}" />
+<input class="data" value="text:{{item.text}}" />
+<view class="circle" wx:if="{{item.new_time=='new_time'+input_data.length}}">a</view>
+</view>
+<button bindtap="addToFront">
+前部插入元素
+</button>
+<button bindtap="switch">
+随机排序
+</button>
+</view>

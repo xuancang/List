@@ -1,0 +1,63 @@
+<!--index.wxml-->
+<view class="container">
+
+  <!-- 用户 openid -->
+  <view class="userinfo">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+      size="default"
+    ></button>
+    <view class="userinfo-nickname-wrapper">
+      <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
+    </view>
+  </view>
+
+  <!-- schedule -->
+  <view class="uploader">
+    <view class="uploader-text" bindtap="doUpload">
+      <text>记录</text>
+    </view>
+    <view class="uploader-container" wx:if="{{imgUrl}}">
+      <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+    </view>
+  </view>
+
+  <!-- scheudule -->
+  <view class="uploader">
+    <navigator url="../schedule/schedule" open-type="navigate" class="uploader-text">
+      <text>schedule</text>
+    </navigator>
+  </view>
+
+  <!-- 天气 -->
+  <view class="uploader">
+    <navigator url="../weather/weather" open-type="navigate" class="uploader-text">
+      <text>天气</text>
+    </navigator>
+  </view>
+
+  <!-- 记录 -->
+  <view class="uploader">
+    <navigator url="../" open-type="navigate" class="uploader-text">
+      <text>记录</text>
+    </navigator>
+  </view>
+
+  <!-- FUN -->
+  <view class="uploader">
+    <navigator url="../FUN/FUN" open-type="navigate" class="uploader-text">
+      <text>FUN</text>
+    </navigator>
+  </view>
+
+  <!-- test -->
+  <view class="uploader">
+    <navigator url="../test/test" open-type="navigate" class="uploader-text">
+      <text>test</text>
+    </navigator>
+  </view>
+
+</view>
